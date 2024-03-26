@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Button</title>
+</head>
+<body>
+    <input type="text" id="text1" placeholder="النص الأول">
+    <br>
+    <input type="text" id="text2" placeholder="النص الثاني">
+    <br>
+    <button id="whatsappButton">ارسال على WhatsApp</button>
+    <script>
+       document.getElementById("whatsappButton").addEventListener("click", function() {
+    var text1 = "text1"; // قم بتغييره إلى النص الأول الخاص بك
+    var text2 = "text2"; // قم بتغييره إلى النص الثاني الخاص بك
+    var message = encodeURIComponent(text1 + "\n" + text2);
+    var whatsapp_url = "https://wa.me/01027348103?text=" + message;
+    window.open(whatsapp_url);
+});
+    </script>
+</body>
+</html>
